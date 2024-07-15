@@ -1,0 +1,396 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <link rel="shortcut icon" href="/icons/fav.png" type="image/x-icon">
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, user-scalable=no"
+    />
+    <meta name="keywords" content="NEB Notes" />
+    <meta name="keywords" content="NEB Notes Nepal" />
+    <link rel="stylesheet" href="/src/output.css" />
+    <link rel="stylesheet" href="/src/extraheader.css" />
+
+    <!-- libraries -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+    />
+
+    <title>NEB Notes</title>
+  </head>
+  <body class="bg-backround_light transition-all ease-in-out delay-75">
+    <!-- header section starts here nortex sc -->
+    <header
+      class="z-50 fixed bg-backround_light px-4 md:px-8 w-full h-24 flex justify-between shadow-md shadow-shadow_colour transition-all ease-in-out delay-75"
+    >
+      <!-- Logo For Neb Notes -->
+      <div class="logo-div pt-5">
+        <a href="/">
+          <!-- logo icon -->
+          <img
+            src="/icons/logolight.png"
+            alt="NEB Notes"
+            class="object-cover h-14"
+            id="logoImage"
+          />
+        </a>
+      </div>
+
+      <!-- Nav part  starts here -->
+      <nav class="hidden xl:block" id="topNav">
+        <ul class="flex justify-between pt-[36px]">
+          <li>
+            <a class="px-4 font-sans text-[20px]"> Grade 12 </a>
+          </li>
+          <li>
+            <a class="px-4 font-sans text-[20px]"> Grade 11 </a>
+          </li>
+          <li>
+            <a class="px-4 font-sans text-[20px]"> Grade 10 </a>
+          </li>
+          <li>
+            <a class="px-4 font-sans text-[20px]"> Grade 9 </a>
+          </li>
+          <li>
+            <a class="px-4 font-sans text-[20px]"> Grade 8 </a>
+          </li>
+        </ul>
+      </nav>
+
+      <!-- ham menu and drk-lt theme -->
+      <div class="extra-nav flex transition-all ease-in-out delay-75">
+        <!-- search -->
+        <div class="relative px-2 pt-[30px] hidden sm:block">
+          <input
+            id="searchInputBoxTop"
+            type="text"
+            name="q"
+            autocomplete="off"
+            class="w-full border h-9 shadow p-4 rounded-full dark:text-gray-800 dark:border-gray-700 dark:bg-gray-200"
+            placeholder="search"
+          />
+          <button type="submit">
+            <svg
+              class="text-teal-400 h-5 w-5 absolute top-9 right-5 fill-current dark:text-text_dark"
+              xmlns="http://www.w3.org/2000/svg"
+              xmlns:xlink="http://www.w3.org/1999/xlink"
+              version="1.1"
+              x="0px"
+              y="0px"
+              viewBox="0 0 56.966 56.966"
+              style="enable-background: new 0 0 56.966 56.966"
+              xml:space="preserve"
+            >
+              <path
+                d="M55.146,51.887L41.588,37.786c3.486-4.144,5.396-9.358,5.396-14.786c0-12.682-10.318-23-23-23s-23,10.318-23,23  s10.318,23,23,23c4.761,0,9.298-1.436,13.177-4.162l13.661,14.208c0.571,0.593,1.339,0.92,2.162,0.92  c0.779,0,1.518-0.297,2.079-0.837C56.255,54.982,56.293,53.08,55.146,51.887z M23.984,6c9.374,0,17,7.626,17,17s-7.626,17-17,17  s-17-7.626-17-17S14.61,6,23.984,6z"
+              ></path>
+            </svg>
+          </button>
+
+          <div
+            id="searchResultBoxTop"
+            class="rounded-md absolute bg-gray-200 w-full left-0 top-20"
+          >
+            <div>
+              <a class="hidden border-b-2 border-shadow_colour hover:bg">
+                <h3 class="font-sans text-md">Class 11 Mathematics Sets</h3>
+                <p class="pb-3 font-light text-sm">
+                  Sets whole exercise Grade 11
+                </p>
+              </a>
+            </div>
+          </div>
+        </div>
+        <!-- drk-lt mode button -->
+        <div
+          class="h-9 w-9 pt-[30px] mx-2 transition-all ease-in-out delay-75"
+          id="themeToggler"
+        >
+          <img src="/icons/moon.png" alt="Theme" id="themeImage" />
+        </div>
+        <!-- ham burger menu -->
+        <div
+          class="h-9 w-9 pt-[32px] mx-2 transition-all ease-in-out delay-75"
+          id="hamButton"
+        >
+          <img src="/icons/menulight.png" alt="Menu" id="hamImage" />
+        </div>
+      </div>
+    </header>
+
+    <main class="relative bg-backround_light sm:pr-[232px] px-4 pt-28 transition-all ease-in-out delay-75">
+      <!-- side nav -->
+      <section
+        id="sideNav"
+        class="bg-backround_light border-l-2 border-shadow_colour w-full sm:w-[216px] h-dvh fixed right-0 top-0 translate-y-24  transition-all ease-in-out delay-75"
+      >
+      <!-- search -->
+      <div class="relative px-2 pt-[30px] sm:hidden">
+        <input
+          id="searchInputBoxSide"
+          type="text"
+          name="q"
+          autocomplete="off"
+          class="w-full border h-9 shadow p-4 rounded-full dark:text-gray-800 dark:border-gray-700 dark:bg-gray-200"
+          placeholder="search"
+        />
+        <button type="submit">
+          <svg
+            class="text-teal-400 h-5 w-5 absolute top-9 right-5 fill-current dark:text-text_dark"
+            xmlns="http://www.w3.org/2000/svg"
+            xmlns:xlink="http://www.w3.org/1999/xlink"
+            version="1.1"
+            x="0px"
+            y="0px"
+            viewBox="0 0 56.966 56.966"
+            style="enable-background: new 0 0 56.966 56.966"
+            xml:space="preserve"
+          >
+            <path
+              d="M55.146,51.887L41.588,37.786c3.486-4.144,5.396-9.358,5.396-14.786c0-12.682-10.318-23-23-23s-23,10.318-23,23  s10.318,23,23,23c4.761,0,9.298-1.436,13.177-4.162l13.661,14.208c0.571,0.593,1.339,0.92,2.162,0.92  c0.779,0,1.518-0.297,2.079-0.837C56.255,54.982,56.293,53.08,55.146,51.887z M23.984,6c9.374,0,17,7.626,17,17s-7.626,17-17,17  s-17-7.626-17-17S14.61,6,23.984,6z"
+            ></path>
+          </svg>
+        </button>
+
+        <div
+          id="searchResultBoxSide"
+          class="rounded-md z-50 absolute bg-gray-200 w-full left-0 top-20"
+        >
+          <div>
+            <a class="hidden border-b-2 border-shadow_colour hover:bg">
+              <h3 class="font-sans text-md">Class 11 Mathematics Sets</h3>
+              <p class="pb-3 font-light text-sm">
+                Sets whole exercise Grade 11
+              </p>
+            </a>
+          </div>
+        </div>
+      </div>
+        <!-- top side nav -->
+        <div
+          id="sideNavTop"
+          class="overflow-x-hidden overflow-y-scroll w-[160px] h-[70dvh] mr-8 ml-6 grid grid-flow-row grid-cols-4"
+        >
+          <div
+            id="sideNavTopLeft"
+            class="col-span-1 grid w-full h-full  grid-rows-7 grid-flow-col gap-4"
+          >
+            <div class="row-span-1 grid place-content-center">
+              <svg
+                class="col-span-1"
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 24 24"
+                width="36"
+                height="36"
+                fill="currentColor"
+              >
+                <path fill="none" d="M0 0h24v24H0z"></path>
+                <path
+                  d="M19 21H5C4.44772 21 4 20.5523 4 20V11L1 11L11.3273 1.6115C11.7087 1.26475 12.2913 1.26475 12.6727 1.6115L23 11L20 11V20C20 20.5523 19.5523 21 19 21ZM6 19H18V9.15745L12 3.7029L6 9.15745V19Z"
+                ></path>
+              </svg>
+            </div>
+
+            <div class="row-span-1 grid place-content-center">
+              <svg
+                class="col-span-1"
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 24 24"
+                width="36"
+                height="36"
+                fill="currentColor"
+              >
+                <path fill="none" d="M0 0h24v24H0z"></path>
+                <path
+                  d="M12 22C6.47715 22 2 17.5228 2 12C2 6.47715 6.47715 2 12 2C17.5228 2 22 6.47715 22 12C22 17.5228 17.5228 22 12 22ZM12 20C16.4183 20 20 16.4183 20 12C20 7.58172 16.4183 4 12 4C7.58172 4 4 7.58172 4 12C4 16.4183 7.58172 20 12 20ZM11 7H13V9H11V7ZM11 11H13V17H11V11Z"
+                ></path>
+              </svg>
+            </div>
+
+            <div class="row-span-1 grid place-content-center">
+              <div
+                class="col-span-1 w-8 h-8 rounded-full border-[3px] border-backround_dark text-center font-semibold text-lg"
+              >
+                12
+              </div>
+            </div>
+
+            <div class="row-span-1 grid place-content-center">
+              <div
+                class="col-span-1 w-8 h-8 rounded-full border-[3px] border-backround_dark text-center font-semibold text-lg"
+              >
+                11
+              </div>
+            </div>
+
+            <div class="row-span-1 grid place-content-center">
+              <div
+                class="col-span-1 w-8 h-8 rounded-full border-[3px] border-backround_dark text-center font-semibold text-lg"
+              >
+                10
+              </div>
+            </div>
+
+            <div class="row-span-1 grid place-content-center">
+              <div
+                class="col-span-1 w-8 h-8 rounded-full border-[3px] border-backround_dark text-center font-semibold text-lg"
+              >
+                9
+              </div>
+            </div>
+
+            <div class="row-span-1 grid place-content-center">
+              <div
+                class="col-span-1 w-8 h-8 rounded-full border-[3px] border-backround_dark text-center font-semibold text-lg"
+              >
+                8
+              </div>
+            </div>
+          </div>
+
+          <!-- right part -->
+          <div
+            id="sideNavTopRight"
+            class=" col-span-3 grid w-full h-full  grid-rows-7 grid-flow-col gap-4 transition-transform ease-in-out delay-200"
+          >
+            <div
+              class="row-span-1 relative grid place-content-center text-xl text-left"
+            >
+              <p class="w-[120px]">Home</p>
+            </div>
+
+            <div
+              class="row-span-1 relative grid place-content-center text-xl text-left"
+            >
+              <p class="w-[120px]">About</p>
+            </div>
+
+            <div
+              class="row-span-1 relative grid place-content-center text-xl text-left"
+            >
+              <p class="w-[120px] flex justify-between">
+                CLass 12
+              </p>
+              <!-- <div class="hiddden w-40 pl-10 rounded-md py-2 -left-10 bg-backround_light z-50 absolute top-10 justify-right">
+                <a class="mr-10 border-b-2 border-shadow_colour font-sans font-light font-sm">Science</a>
+                <a class="pr-10 border-b-2 border-shadow_colour font-sans font-light font-sm">CS</a>
+                <a class="pr-10 border-b-2 border-shadow_colour font-sans font-light font-sm">Management</a>
+                <a class="pr-10 border-b-2 border-shadow_colour font-sans font-light font-sm">Education</a>
+              </div> -->
+            </div>
+
+            <div
+              class="row-span-1 relative grid place-content-center text-xl text-left"
+            >
+              <p class="w-[120px] flex justify-between">
+                Class 11
+              </p>
+            </div>
+
+            <div
+              class="row-span-1 relative grid place-content-center text-xl text-left"
+            >
+              <p class="w-[120px] flex justify-between">
+                Class 10
+              </p>
+            </div>
+
+            <div
+              class="row-span-1 relative grid place-content-center text-xl text-left"
+            >
+              <p class="w-[120px] flex justify-between">
+                Class 9
+              </p>
+            </div>
+
+            <div
+              class="row-span-1 relative grid place-content-center text-xl text-left"
+            >
+              <p class="w-[120px] flex justify-between">
+                Class 8
+              </p>
+            </div>
+          </div>
+          <div class="">
+
+          </div>
+        </div>
+        <!-- top side nav end -->
+
+
+
+         <!-- bottom side nav -->
+         <div
+         id="sideNavBottom"
+         class=" w-[160px] pt-[2dvh] sm:pt-[5dvh] h-[20dvh] sm:h-[30dvh] mr-8 ml-6 grid grid-flow-row grid-cols-4 transition-all ease-in-out delay-75"
+       >
+         <div
+           id="sideNavBottmLeft"
+           class="col-span-1 grid w-full h-full  grid-rows-7 grid-flow-col gap-2"
+         >
+           <div class="row-span-1 grid place-content-center">
+            <svg
+            class="col-span-1"
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 24 24"
+            width="32"
+            height="32"
+            fill="currentColor"
+          >
+            <path fill="none" d="M0 0h24v24H0z"></path>
+            <path
+              d="M19 7H24V9H19V7ZM17 12H24V14H17V12ZM20 17H24V19H20V17ZM2 22C2 17.5817 5.58172 14 10 14C14.4183 14 18 17.5817 18 22H16C16 18.6863 13.3137 16 10 16C6.68629 16 4 18.6863 4 22H2ZM10 13C6.685 13 4 10.315 4 7C4 3.685 6.685 1 10 1C13.315 1 16 3.685 16 7C16 10.315 13.315 13 10 13ZM10 11C12.21 11 14 9.21 14 7C14 4.79 12.21 3 10 3C7.79 3 6 4.79 6 7C6 9.21 7.79 11 10 11Z"
+            ></path>
+          </svg>
+           </div>
+
+         </div>
+
+         <!-- right part -->
+         <div
+           id="sideNavBottomRight"
+           class=" col-span-3 grid w-full h-full  grid-rows-7 grid-flow-col gap-2 transition-transform ease-in-out delay-200"
+         >
+           <div
+             class="row-span-1 relative grid place-content-center text-xl text-left"
+           >
+             <p class="w-[120px]">Contact US</p>
+           </div>
+
+         </div>
+       </div>
+       <!-- bottom side nav end -->
+
+
+      </section>
+      <!-- side nav end -->
+
+      <!-- backto top -->
+      <div
+        class="fixed h-12 w-12 animate-bounce bg-backround_light rounded-full bottom-4 left-4 hidden transition-all ease-in-out delay-300"
+        id="backToTop"
+      >
+        <div>
+          <img src="/icons/backtotop.png" class="w-full h-full" alt="Top" />
+        </div>
+      </div>
+      <!-- back to top end -->
+
+      <article class="text-justify grid place-content-center h-full transition-all ease-in-out delay-75">
+
+        <h1 class="text-xl font-sans md:text-5xl">NEBNOTES.XYZ Is Under Maintainence</h1>
+        <h6 class="text-lg text-center pt-16 md:text-2xl">For feedback: 9826608987</h6>
+        <h6 class="text-lg text-center pt-4 md:text-2xl">For feedback: notexstudios@gmail.com</h6>
+
+      </article>
+    </main>
+
+
+    <!-- JS files below -->
+    <script src="/js/header.js"></script>
+    <script src="/js/search.js"></script>
+    <script src="/js/theme.js"></script>
+  </body>
+</html>

@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Quiz App</title>
+  <style>
+    body {
+    background-color: #f2f2f2;
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+  }
+  
+  .quiz-container {
+    width: auto;
+    height: auto;
+    background-color: #fff;
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  }
+  
+  h1 {
+    text-align: center;
+  }
+  
+  #question-container {
+    margin-bottom: 20px;
+  }
+  
+  #question-text {
+    font-size: 18px;
+    margin-bottom: 10px;
+  }
+  
+  #answer-buttons {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 10px;
+  }
+  
+  button {
+    height: 40px;
+    font-size: 16px;
+    background-color: #eaeaea;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  button:hover {
+    background-color: #d2d2d2;
+  }
+  
+  #controls-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  #timer-container {
+    display: flex;
+    align-items: center;
+  }
+  
+  #timer-text {
+    font-size: 14px;
+  }
+  
+  #timer {
+    font-weight: bold;
+    margin-left: 5px;
+  }
+  </style>
+</head>
+<body>
+  <div class="quiz-container">
+    <h1>Quiz game</h1>
+    <div id="question-container">
+      <p id="question-text"></p>
+      <div id="answer-buttons"></div>
+    </div>
+    <div id="controls-container">
+      <button id="start-button">Start Quiz</button>
+      <div id="timer-container">
+        <span id="timer-text">Time Left: <span id="timer">0</span></span>
+      </div>
+    </div>
+  </div>
+  <script >
+    const quizQuestions = [
+    {
+      question: "Which of the following has same dimeensions as that of frequncy?",
+      options: ["C/L", "root(LC)", "C/R", "R/L"],
+      correctAnswer: "R/L"
+    },
+    {
+      question: "Mosquito can float on the surface of water due to.....",
+      options: ["viscocity", "Surface Tension", "Upthrust", "light Mass"],
+      correctAnswer: "Surface Tension"
+    },
+    {
+      question: "What is the chemical symbol for gold?",
+      options: ["Au", "Ag", "Al", "Ar"],
+      correctAnswer: "Au"
+    }
+  ];
+ 
+ 
+  let currentQuestionIndex = 0;
+  let score = 0;
+  let timeLeft = 120;
+  let timerInterval;
+
+  function startQuiz() {
+    // Hide the start button and display the first question
+    document.getElementById("start-button").style.display = "none";
+    displayQuestion();
+    startTimer();
+  }
+ 
+
+  function displayQuestion() {
+    const currentQuestion = quizQuestions[currentQuestionIndex];
+    const questionText = document.getElementById("question-text");
+    const answerButtons = document.getElementById("answer-buttons");
+ 
+
+    questionText.innerHTML = "";
+    answerButtons.innerHTML = "";
+ 
+
+    questionText.innerHTML = currentQuestion.question;
+ 
+
+    currentQuestion.options.forEach(option => {
+      const button = document.createElement("button");
+      button.innerText = option;
+      button.classList.add("answer-button");
+      answerButtons.appendChild(button);
+ 
+      // Add click event listener to check the answer
+      button.addEventListener("click", function() {
+        checkAnswer(option);
+      });
+    });
+  }
+ 
+  function checkAnswer(selectedOption) {
+    const currentQuestion = quizQuestions[currentQuestionIndex];
+ 
+
+    if (selectedOption === currentQuestion.correctAnswer) {
+      score++;
+    }
+ 
+
+    currentQuestionIndex++;
+ 
+    if (currentQuestionIndex < quizQuestions.length) {
+      displayQuestion();
+    } else {
+      endQuiz();
+    }
+  }
+ 
+
+  function startTimer() {
+    timerInterval = setInterval(function() {
+      timeLeft--;
+ 
+
+      document.getElementById("timer").textContent = timeLeft;
+ 
+
+      if (timeLeft <= 0) {
+        endQuiz();
+      }
+    }, 1000);
+  }
+ 
+
+  function endQuiz() {
+    // Stop the timer
+    clearInterval(timerInterval);
+
+   const questionContainer = document.getElementById("question-container");
+    questionContainer.innerHTML = `
+      <h2>Quiz Completed!</h2>
+      <p>Your Score: ${score} out of ${quizQuestions.length}</p>
+    `;
+  }
+ 
+  document.getElementById("start-button").addEventListener("click", startQuiz);
+  </script>
+</body>
+</html>
